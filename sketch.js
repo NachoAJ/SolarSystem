@@ -2,7 +2,7 @@ function setup() {
 	createCanvas(1250,1250);
 	this.velocity = 0.01;
 	sol = new Planet(60,0,0);
-	mercurio = new Planet(5,50,this.velocity/0.24);
+	mercurio = new Planet(8,50,this.velocity/0.24);
 	venus = new Planet(12,82,this.velocity/0.62);
 	tierra = new Planet(13,120,this.velocity/1);
 	luna = new Planet(5,16,this.velocity/0.07);
@@ -41,6 +41,10 @@ function draw() {
 	jupiter.show();
 	jupiter.update();
 	saturno.showRadius();
+	strokeWeight(2);
+	stroke(139,69,19);
+	noFill();
+	ellipse(saturno.x,saturno.y,50,50);
 	fill(224,164,96);
 	saturno.show();
 	saturno.update();
